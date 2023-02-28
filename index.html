@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble</title>
+    <style>
+      @viewport {
+        user-zoom: fixed !important;
+      }
+      * {
+        user-select: none !important;
+        color: brown;
+      }
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+      #loader {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        vertical-align: middle;
+        color: rgb(11, 11, 11);
+        font-size: 2em;
+        overflow: hidden;
+        position: absolute;
+        padding-top: 48vh;
+      }
+      #title {
+        color: #ffffff;
+        text-shadow: 0 0 10px black;
+        font-size: 3.4em;
+        position: absolute;
+        font-weight: 700;
+        padding-left: 0.2em;
+      }
+      #msg {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        color: rgb(11, 11, 11);
+        background-color: rgb(255, 255, 255);
+        font-size: 1.2em;
+        padding-top: 48vh;
+        vertical-align: middle;
+        text-align: center;
+      }
+
+      #renderer-container {
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+        border: 1.2rem solid brown;
+        box-shadow: 0 0 19px 4px grey;
+        position: relative;
+      }
+      header {
+        text-align: center;
+      }
+      header > h1 {
+        font-size: 2.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader">Loading</div>
+    <div id="msg">
+      This app is currently available for desktop devices only.
+    </div>
+
+    <header>
+      <h1>Bubble in 3D space!</h1>
+    </header>
+    <div id="renderer-container">
+      <div id="title">Bubble</div>
+    </div>
+
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
